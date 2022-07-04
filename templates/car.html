@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars</title>
+</head>
+<body>
+
+<div class="show_cars">
+        <a>Список команд:</a><br>
+        <a href="/add-car" class="add_car">Добавити машину</a>
+</div>
+<div class="show_car">
+    {% for key in data %}
+        <p>
+        {% set a = key['brand'] %}
+        {% set b = key['type'] %}
+        {% set c = key['number'] %}
+        {% set d = key['user_id'] %}
+            <b>{{a}} <br></b>
+            <b>{{b}} <br></b>
+            <b>{{c}} <br></b>
+        {{d}} <br>
+       <a href="/delete-car/{{ d }}/del" class="btn danger">Видалити дані</a>
+       <br>
+       <a href="/update-car/{{ d }}/up" class="btn success">Оновити дані</a>
+    {% endfor %}
+</div>
+</body>
+</html>

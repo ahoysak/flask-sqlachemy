@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="remove_cars">
+    <a>Змінити дані про автомобіль</a>
+    <form action="/update-car/{{ user['user_id'] }}/save" name="main_form" method="post">
+        <p>User Id :<br>
+            <input value="{{ user['user_id'] }}" type=text  name="user_id"></p>
+        <p>Text №2<br>
+            <textarea name="brand">{{user['brand']}}</textarea></p>
+        <p>Email</p>
+            <textarea name="type">{{user['type']}}</textarea></p>
+        <p>Number</p>
+            <textarea name="number">{{user['number']}}</textarea></p>
+        <p><input  type="submit" value="Відправити"></p>
+    </form>
+    <a href="/" class="input_msg">Перейти на головну</a>
+</div>
+</body>
+</html>
