@@ -8,20 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-<div class="remove_cars">
-    <a>Змінити дані про автомобіль</a>
-    <form action="/update-car/{{ user['user_id'] }}/save" name="main_form" method="post">
-        <p>User Id :<br>
-            <input value="{{ user['user_id'] }}" type=text  name="user_id"></p>
-        <p>Text №2<br>
-            <textarea name="brand">{{user['brand']}}</textarea></p>
-        <p>Email</p>
-            <textarea name="type">{{user['type']}}</textarea></p>
-        <p>Number</p>
-            <textarea name="number">{{user['number']}}</textarea></p>
-        <p><input  type="submit" value="Відправити"></p>
-    </form>
-    <a href="/" class="input_msg">Перейти на головну</a>
+<div class="update_cars">
+<form method="post">
+        <a>Оновлення даних про авто {{ update_data_car ['brand']}}</a><br>
+        <p>BRAND<br>
+        <input type="text" name="brand" class="form control" value="{{ update_data_car.brand }}">
+        <p>TYPE<br>
+        <textarea name="type">{{ update_data_car['type']}}</textarea></p>
+        <p>NUMBER</p>
+        <textarea name="number">{{ update_data_car['number']}}</textarea></p>
+        <p><input  type="submit" value="Оновити"></p>
+</form>
 </div>
 </body>
 </html>

@@ -14,16 +14,16 @@
         <a href="/add-car" class="add_car">Добавити машину</a>
 </div>
 <div class="show_car">
-    {% for key in data %}
+    {% for el in all_data %}
         <p>
-        {% set a = key['brand'] %}
-        {% set b = key['type'] %}
-        {% set c = key['number'] %}
-        {% set d = key['user_id'] %}
-            <b>{{a}} <br></b>
-            <b>{{b}} <br></b>
-            <b>{{c}} <br></b>
-        {{d}} <br>
+        {% set a = el['brand'] %}
+        {% set b = el['type'] %}
+        {% set c = el['number'] %}
+        {% set d = el['user_id'] %}
+        <b>{{a}} <br></b>
+        <b>{{b}} <br></b>
+        <b>{{c}} <br></b>
+        <b>{{d}} <br></b>
        <a href="/delete-car/{{ d }}/del" class="btn danger">Видалити дані</a>
        <br>
        <a href="/update-car/{{ d }}/up" class="btn success">Оновити дані</a>

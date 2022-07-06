@@ -5,26 +5,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Оновлення даних</title>
 </head>
 <body>
-<div class="delete_user">
-    <form action="/update/{{ user['id'] }}/save" name="main_form" method="post">
-        <p>Text №1:<br>
-            <input value="{{user['nickname']}}" type=text  name="nickname"></p>
-        <p>Text №2<br>
-            <textarea name="text">{{user['text']}}</textarea></p>
+<div class="input_msg">
+<form method="post">
+        <a>Оновлення даних про користувача з ID {{ update_data ['id']}}</a><br>
+        <p>Nickname<br>
+        <input type="text" name="nickname" class="form control" value="{{ update_data.nickname }}">
+        <p>Text<br>
+        <textarea name="text">{{update_data['text']}}</textarea></p>
         <p>Email</p>
-            <textarea name="email">{{user['email']}}</textarea></p>
+        <textarea name="email">{{update_data['email']}}</textarea></p>
         <p>First Name</p>
-            <textarea name="first_name">{{user['first_name']}}</textarea></p>
+        <textarea name="first_name">{{update_data['first_name']}}</textarea></p>
         <p>Last Name</p>
-            <textarea name="last_name">{{user['last_name']}}</textarea></p>
+        <textarea name="last_name">{{update_data['last_name']}}</textarea></p>
         <p>Password</p>
-            <textarea name="password">{{user['password']}}</textarea></p>
-        <p><input  type="submit" value="Відправити"></p>
-    </form>
-    <a href="/about" class="add_text">Перейти до даних</a>
+        <textarea name="password">{{update_data['password']}}</textarea></p>
+        <p><input  type="submit" value="Оновити"></p>
+</form>
 </div>
 </body>
 </html>
