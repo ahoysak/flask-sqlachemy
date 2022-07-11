@@ -10,7 +10,8 @@
 <body>
 <div class="add_text">
         <p>Show Command:<br>
-        <a href="/add" class="add_text">Добавити дані</a>
+        <a href="/add" class="add_text">Добавити дані</a><br>
+        <a href="/check" class="authorization">Авторизація</a>
 </div>
 <div class="container mt-5">
 <a>Дані Користувачів</a><br>
@@ -27,7 +28,7 @@
     <b>{{b}}</b> <br>
     <b>{{c}}</b> <br>
     <b>{{d}}</b> <br>
-    <b>{{e}}</b> <br>
+    <a href = '/same/{{ c }}/id'>{{e}} <br></a>
     <b>{{f}}</b> <br>
     <b>{{g}}</b> <br>
     <a href="/delete/{{ c }}/del" class="btn danger">Видалити дані</a><br>
